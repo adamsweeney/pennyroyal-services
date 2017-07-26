@@ -67,4 +67,3 @@ production:
   <<: *default
   database: pennyroyal_production
   username: asweeney
-  password: <%= ENV['DB_PASS'] %>
