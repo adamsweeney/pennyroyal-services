@@ -10,10 +10,6 @@ class UsersController < ApplicationController
 		respond_with User.find(params[:id])
 	end
 
-	def index
-
-	end
-
 	private
 
 	def user_params
