@@ -57,7 +57,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-	#Route this to wherever you put the cors_preflight_check
-#This is to handle the CORS preflight request, it only catches the options action.
-	match "*all" => "application#cors_preflight_check", :constraints => { :method => "OPTIONS" }
 end
