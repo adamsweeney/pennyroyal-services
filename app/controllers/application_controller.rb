@@ -1,3 +1,5 @@
+require "application_responder"
+
 class ApplicationController < ActionController::Base
   respond_to :json
   # Prevent CSRF attacks by raising an exception.
