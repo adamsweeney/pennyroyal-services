@@ -59,7 +59,5 @@ Rails.application.routes.draw do
   #   end
 	#Route this to wherever you put the cors_preflight_check
 #This is to handle the CORS preflight request, it only catches the options action.
-	controller '/' do
-	  match '*unmatched_route', :to => '#route_options', via: [:options]
-	end
+	match "*all" => "application#cors_preflight_check", :constraints => { :method => "OPTIONS" }
 end
