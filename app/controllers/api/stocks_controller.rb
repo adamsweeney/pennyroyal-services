@@ -1,4 +1,4 @@
-class API::StocksController < ApplicationController
+class Api::StocksController < ApplicationController
 
 	def create
 		@stock = current_user.stocks.build(stock_params)
