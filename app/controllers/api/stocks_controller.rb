@@ -3,7 +3,6 @@ class Api::StocksController < ApplicationController
 	def create
 		@stock = current_user.stocks.build(stock_params)
 		if @stock.save
-			Rails.logger.info("Stock is #{@stock[:id]}")
 			respond_with @stock
 		else
 			respond_with({ error: "Unauthorized" }, status: :unauthorized)
@@ -12,6 +11,10 @@ class Api::StocksController < ApplicationController
 
 	def show
 		respond_with current_user.stocks.find(params[:id])
+	end
+
+	def index
+		respond_with current_user.stocks
 	end
 
 	private
