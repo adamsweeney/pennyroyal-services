@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module PennyroyalServices
   class Application < Rails::Application
+    config.encoding = "utf-8"
+    
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
         origins '*'
