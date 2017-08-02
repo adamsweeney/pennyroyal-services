@@ -10,7 +10,7 @@ class Api::StocksController < ApplicationController
 	end
 
 	def show
-		respond_with current_user.stocks.find(params[:id])
+		respond_with current_user.stocks.find_by(id: params[:id])
 	end
 
 	def index
